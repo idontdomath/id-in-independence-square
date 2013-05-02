@@ -78,7 +78,7 @@ IDInISGame = {
     Crafty.e('Statue').at(15,11);
 
     //player positioning
-    Crafty.e('IDCharacter').at(1, 1);
+    Crafty.e('IDCharacter').at(6, 0);
     
   }
 }
