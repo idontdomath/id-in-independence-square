@@ -63,3 +63,17 @@ Crafty.c('Statue', {
     .color('rgb(92, 64, 51)');
   },
 });
+
+Crafty.c('Actor', {
+  init: function() {
+    this.requires('2D, Canvas, Grid');
+  },
+});
+
+Crafty.c('IDCharacter', {
+  init: function() {
+    this.requires('Actor, Fourway, Color')
+      .fourway(4)
+      .color('orange');
+  }
+});

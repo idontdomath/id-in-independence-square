@@ -27,8 +27,6 @@ IDInISGame = {
     Crafty.init(IDInISGame.width(), IDInISGame.height());
     Crafty.background('rgb(143, 143, 143)');
 
-
-
     //basic layout of the chess design of the square
     for (var x = 0; x < IDInISGame.map_grid.width; x++) {
       
@@ -78,6 +76,9 @@ IDInISGame = {
     //internal base
     Crafty.e('StatueInternalBase').at(14,10);
     Crafty.e('Statue').at(15,11);
+
+    //player positioning
+    Crafty.e('IDCharacter').at(1, 1);
     
   }
 }
