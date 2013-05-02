@@ -27,6 +27,8 @@ IDInISGame = {
     Crafty.init(IDInISGame.width(), IDInISGame.height());
     Crafty.background('rgb(143, 143, 143)');
 
+
+
     //basic layout of the chess design of the square
     for (var x = 0; x < IDInISGame.map_grid.width; x++) {
       
@@ -50,7 +52,6 @@ IDInISGame = {
         }
         else {
           if (even_x || even_y) {
-
             Crafty.e('2D, Canvas, Color')
               .attr({
                 x: x * IDInISGame.map_grid.tile.width,
@@ -59,80 +60,25 @@ IDInISGame = {
                 h: IDInISGame.map_grid.tile.height
               })
               .color('rgb(176,176,176)');
-
           }
         }
       }
     }
 
     //green spots (on fixed positions)
-    Crafty.e('2D, Canvas, Color')
-      .attr({
-        x: 2 * IDInISGame.map_grid.tile.width,
-        y: 2 * IDInISGame.map_grid.tile.height,
-        w: IDInISGame.map_grid.tile.width * 9,
-        h: IDInISGame.map_grid.tile.height * 6,
-      })
-    .color('rgb(20, 125, 40)');
-
-    Crafty.e('2D, Canvas, Color')
-      .attr({
-        x: 20 * IDInISGame.map_grid.tile.width,
-        y: 2 * IDInISGame.map_grid.tile.height,
-        w: IDInISGame.map_grid.tile.width * 9,
-        h: IDInISGame.map_grid.tile.height * 6,
-      })
-    .color('rgb(20, 125, 40)');
-
-    Crafty.e('2D, Canvas, Color')
-      .attr({
-        x: 2 * IDInISGame.map_grid.tile.width,
-        y: 15 * IDInISGame.map_grid.tile.height,
-        w: IDInISGame.map_grid.tile.width * 9,
-        h: IDInISGame.map_grid.tile.height * 6,
-      })
-    .color('rgb(20, 125, 40)');
-
-    Crafty.e('2D, Canvas, Color')
-      .attr({
-        x: 20 * IDInISGame.map_grid.tile.width,
-        y: 15 * IDInISGame.map_grid.tile.height,
-        w: IDInISGame.map_grid.tile.width * 9,
-        h: IDInISGame.map_grid.tile.height * 6,
-      })
-    .color('rgb(20, 125, 40)');
+    Crafty.e('GreenSpot').at(2, 2);
+    Crafty.e('GreenSpot').at(20, 2);
+    Crafty.e('GreenSpot').at(2, 15);
+    Crafty.e('GreenSpot').at(20, 15);
 
     //statue section (on fixed positions) 
 
     //external base
-    Crafty.e('2D, Canvas, Color')
-      .attr({
-        x: 13 * IDInISGame.map_grid.tile.width,
-        y: 9 * IDInISGame.map_grid.tile.height,
-        w: IDInISGame.map_grid.tile.width * 5,
-        h: IDInISGame.map_grid.tile.height * 5,
-      })
-    .color('grey');
-
+    Crafty.e('StatueExternalBase').at(13,9);
     //internal base
-    Crafty.e('2D, Canvas, Color')
-      .attr({
-        x: 14 * IDInISGame.map_grid.tile.width,
-        y: 10 * IDInISGame.map_grid.tile.height,
-        w: IDInISGame.map_grid.tile.width * 3,
-        h: IDInISGame.map_grid.tile.height * 3,
-      })
-    .color('rgb(69 ,69 ,69)');
-
-    //statue
-    Crafty.e('2D, Canvas, Color')
-      .attr({
-        x: 15 * IDInISGame.map_grid.tile.width,
-        y: 11 * IDInISGame.map_grid.tile.height,
-        w: IDInISGame.map_grid.tile.width * 2,
-        h: IDInISGame.map_grid.tile.height * 1,
-      })
-    .color('rgb(92, 64, 51)');
-
+    Crafty.e('StatueInternalBase').at(14,10);
+    Crafty.e('Statue').at(15,11);
+    
   }
 }
+
